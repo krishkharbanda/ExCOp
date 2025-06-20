@@ -1,0 +1,8 @@
+//
+// Created by Krish on 6/14/25.
+//
+
+#ifndef STRATEGYSIMULATOR_HPP
+#define STRATEGYSIMULATOR_HPP
+
+#endif //STRATEGYSIMULATOR_HPP
