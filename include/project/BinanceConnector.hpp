@@ -5,10 +5,16 @@
 #ifndef BINANCE_CONNECTOR_HPP
 #define BINANCE_CONNECTOR_HPP
 
-class BinanceConnector
-{
+#include "OrderBook.hpp"
+#include <string>
+
+class BinanceConnector {
 public:
+    explicit BinanceConnector(OrderBook* ob);
     void connect();
+
+private:
+    OrderBook* orderBook;
 };
 
-#endif
+#endif //BINANCE_CONNECTOR_HPP
