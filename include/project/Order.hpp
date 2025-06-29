@@ -7,15 +7,19 @@
 
 #include <string>
 
-class Order {
-public:
-    std::string side;
-    double price;
-    double quantity;
+enum class OrderType { MARKET, LIMIT };
+enum class OrderSide { BUY, SELL };
 
-    Order(const std::string& s, double p, double q)
-        : side(s), price(p), quantity(q) {}
+struct Order {
+    int id;
+    OrderType type;
+    OrderSide side;
+    double price;
+    int quantity;
+    long timestamp;
+
+    Order(int id, OrderType t, OrderSide s, double p, int q, long ts);
 };
 
-#endif
+#endif //ORDER_HPP
 
