@@ -3,3 +3,7 @@
 //
 
 #include "project/Metrics.hpp"
+
+double Metrics::computeSlippage(double exec, double arrival) {
+    return ((exec - arrival) / arrival) * 100.0;
+}
